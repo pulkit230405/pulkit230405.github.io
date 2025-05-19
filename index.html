@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulkit Jain - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Apple-Style Sticky Glassy Navbar -->
+    <nav class="navbar apple-navbar">
+        <div class="nav-logo">PJ</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#qualifications">Qualifications</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-controls">
+            <select class="language-select" aria-label="Select Language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="gu">Gujarati</option>
+            </select>
+            <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Apple-Style Hero Section -->
+    <section id="home" class="section apple-hero">
+        <div class="hero-bg-parallax"></div>
+        <div class="hero-content apple-hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Pulkit Jain</h1>
+                <h2 class="hero-subtitle">Computer Science (AI) Student</h2>
+                <p class="hero-tagline">Building intelligent, data-driven solutions with a passion for design and technology.</p>
+                <div class="hero-social-links">
+                    <a href="https://www.instagram.com/pulkit_jain_023/?hl=en" target="_blank" class="social-icon" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pulkit-jain-071996286/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/pulkit230405" target="_blank" class="social-icon" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:pulkitjain230405@gmail.com" class="social-icon" data-tooltip="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator apple-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section apple-section apple-about-section">
+        <div class="about-content-apple">
+            <div class="about-image-apple" data-animate="fade-up">
+                <img src="assets/profile.jpg" alt="Pulkit Jain" class="profile-image-apple-large">
+            </div>
+            <div class="about-text-apple" data-animate="fade-in">
+                <h2 class="about-title-apple">About Me</h2>
+                <p class="about-desc-apple">A third-year Computer Science (AI) student at Marwadi University with a strong interest in building intelligent, data-driven solutions.<br><br>I've completed 7+ projects across machine learning, AI, and analytics, and have over a year of hands-on experience.<br><br>I'm also a core team member of the university Chess Club, an IEEE member, and someone who enjoys applying strategy both in tech and on the chessboard.</p>
+                <div class="about-highlights-apple">
+                    <div class="highlight-apple" data-animate="slide-up">
+                        <span class="highlight-icon-apple"><i class="fas fa-briefcase"></i></span>
+                        <span>Open To Work</span>
+                    </div>
+                    <div class="highlight-apple" data-animate="slide-up" data-delay="100">
+                        <span class="highlight-icon-apple"><i class="fas fa-users"></i></span>
+                        <span>IEEE Member</span>
+                    </div>
+                    <div class="highlight-apple" data-animate="slide-up" data-delay="200">
+                        <span class="highlight-icon-apple"><i class="fas fa-project-diagram"></i></span>
+                        <span>7+ Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="section">
+        <h2 class="section-title">Qualifications</h2>
+        <div class="qualifications-container">
+            <div class="education-section">
+                <h3><i class="fas fa-graduation-cap"></i> Education Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Marwadi University, Rajkot</h4>
+                            <p>B.Tech in Computer Science (AI)</p>
+                            <span class="timeline-date">2023 - 2027</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>K.P.E.S. School</h4>
+                            <p>Higher Secondary Education</p>
+                            <span class="timeline-date">2021 - 2023</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Naimisharanya School</h4>
+                            <p>Secondary Education</p>
+                            <span class="timeline-date">2016 - 2021</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>ASIS School</h4>
+                            <p>Primary Education</p>
+                            <span class="timeline-date">2010 - 2016</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-section apple-skills-section">
+                <h3><i class="fas fa-code"></i> Skills</h3>
+                <div class="skills-tiles-apple">
+                    <div class="skill-category-apple">
+                        <h4>Programming</h4>
+                        <div class="skills-row-apple">
+                            <div class="skill-tile-apple"><i class="fab fa-python"></i><span>Python</span></div>
+                            <div class="skill-tile-apple"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                            <div class="skill-tile-apple"><i class="fab fa-java"></i><span>Java</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-code"></i><span>C++</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category-apple">
+                        <h4>Technical</h4>
+                        <div class="skills-row-apple">
+                            <div class="skill-tile-apple"><i class="fas fa-robot"></i><span>Machine Learning</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-database"></i><span>SQL</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-brain"></i><span>AI</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-project-diagram"></i><span>Data Structures</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category-apple">
+                        <h4>Soft Skills</h4>
+                        <div class="skills-row-apple">
+                            <div class="skill-tile-apple"><i class="fas fa-comments"></i><span>Communication</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-users"></i><span>Teamwork</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-lightbulb"></i><span>Problem Solving</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-chess-king"></i><span>Leadership</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category-apple">
+                        <h4>Languages</h4>
+                        <div class="skills-row-apple">
+                            <div class="skill-tile-apple"><i class="fas fa-language"></i><span>English</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-language"></i><span>Hindi</span></div>
+                            <div class="skill-tile-apple"><i class="fas fa-language"></i><span>Gujarati</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section apple-section apple-projects-section">
+        <h2 class="projects-title-apple" data-animate="fade-in">My Projects</h2>
+        <div class="projects-list-apple">
+            <div class="project-apple" data-animate="fade-up">
+                <div class="project-image-apple">
+                    <img src="assets/stock-market.png" alt="Stock Market Project">
+                </div>
+                <div class="project-info-apple">
+                    <h3 class="project-title-apple">Stock Market Price Prediction Using LSTM</h3>
+                    <div class="project-tags-apple">
+                        <span>Python</span>
+                        <span>LSTM</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <p class="project-desc-apple">A deep learning model to predict stock prices using LSTM networks, providing insights for smarter investments.</p>
+                </div>
+            </div>
+            <div class="project-apple" data-animate="fade-up" data-delay="100">
+                <div class="project-image-apple">
+                    <img src="assets/chess-engine.png" alt="Chess Engine Project">
+                </div>
+                <div class="project-info-apple">
+                    <h3 class="project-title-apple">Chess Engine With AI and OpenCV</h3>
+                    <div class="project-tags-apple">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>AI</span>
+                    </div>
+                    <p class="project-desc-apple">An AI-powered chess engine with computer vision for real-time board recognition and move analysis.</p>
+                </div>
+            </div>
+            <div class="project-apple" data-animate="fade-up" data-delay="200">
+                <div class="project-image-apple">
+                    <img src="assets/live-sketch.png" alt="Live Sketch Project">
+                </div>
+                <div class="project-info-apple">
+                    <h3 class="project-title-apple">Live Sketch Using OpenCV</h3>
+                    <div class="project-tags-apple">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>Image Processing</span>
+                    </div>
+                    <p class="project-desc-apple">Transforms live camera feed into sketch art in real-time using advanced image processing techniques.</p>
+                </div>
+            </div>
+            <div class="project-apple" data-animate="fade-up" data-delay="300">
+                <div class="project-image-apple">
+                    <img src="assets/sentiment-analysis.png" alt="Sentiment Analysis Project">
+                </div>
+                <div class="project-info-apple">
+                    <h3 class="project-title-apple">Sentiment Analysis using OpenCV</h3>
+                    <div class="project-tags-apple">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <p class="project-desc-apple">A machine learning project for analyzing and visualizing sentiment from text data with OpenCV integration.</p>
+                </div>
+            </div>
+            <div class="project-apple" data-animate="fade-up" data-delay="400">
+                <div class="project-image-apple">
+                    <img src="assets/chrome-dino.png" alt="Chrome Dino Game">
+                </div>
+                <div class="project-info-apple">
+                    <h3 class="project-title-apple">Chrome Dino Game With Hand Gesture</h3>
+                    <div class="project-tags-apple">
+                        <span>Python</span>
+                        <span>Computer Vision</span>
+                        <span>Game Dev</span>
+                    </div>
+                    <p class="project-desc-apple">A gesture-controlled version of the classic Chrome Dino game using computer vision and Python.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div class="modal-container">
+        <div class="project-modal">
+            <button class="close-modal">&times;</button>
+            <div class="modal-content">
+                <h2 class="modal-title"></h2>
+                <img class="modal-image" src="" alt="">
+                <div class="modal-description"></div>
+                <div class="modal-tech-stack">
+                    <h3>Technologies Used:</h3>
+                    <ul class="tech-list"></ul>
+                </div>
+                <div class="modal-links">
+                    <a href="#" class="github-link" target="_blank">View on GitHub</a>
+                    <a href="#" class="demo-link" target="_blank">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Download Section -->
+    <div class="resume-section">
+        <a href="assets/resume.pdf" download class="download-resume">
+            <i class="fas fa-file-download"></i>
+            Download Resume
+        </a>
+    </div>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section apple-section apple-achievements-section">
+        <div class="achievements-content-apple">
+            <h2 class="achievements-title-apple" data-animate="fade-in">Achievements</h2>
+            <div class="achievements-list-apple">
+                <div class="achievement-apple" data-animate="fade-up">
+                    <div class="achievement-icon-apple"><i class="fas fa-robot"></i></div>
+                    <div class="achievement-info-apple">
+                        <h3>Robocomp 2.0 & GoDrone</h3>
+                        <p>Hosted and organized major technical events, demonstrating leadership and event management skills.</p>
+                    </div>
+                </div>
+                <div class="achievement-apple" data-animate="fade-up" data-delay="100">
+                    <div class="achievement-icon-apple"><i class="fas fa-users"></i></div>
+                    <div class="achievement-info-apple">
+                        <h3>La-amistad Fiesta</h3>
+                        <p>Led the organization of a cultural fest, fostering community engagement and cultural exchange.</p>
+                    </div>
+                </div>
+                <div class="achievement-apple" data-animate="fade-up" data-delay="200">
+                    <div class="achievement-icon-apple"><i class="fas fa-square-root-alt"></i></div>
+                    <div class="achievement-info-apple">
+                        <h3>Mathematics Competition</h3>
+                        <p>2nd Runners up at National Mathematics Day event, showcasing strong analytical skills.</p>
+                    </div>
+                </div>
+                <div class="achievement-apple" data-animate="fade-up" data-delay="300">
+                    <div class="achievement-icon-apple"><i class="fas fa-chess"></i></div>
+                    <div class="achievement-info-apple">
+                        <h3>Chess Leadership</h3>
+                        <p>Captain for AIU Chess team 2024 and Core Team member at Chess Club MU.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section apple-section apple-contact-section">
+        <div class="contact-content-apple">
+            <div class="contact-info-apple" data-animate="fade-in">
+                <h2 class="contact-title-apple">Work With Me</h2>
+                <h3 class="contact-subtitle-apple">Let's Connect!</h3>
+                <p class="contact-desc-apple">Feel free to reach out for collaborations or just a friendly chat.</p>
+                <div class="contact-details-apple">
+                    <div class="contact-item-apple"><i class="fas fa-envelope"></i> pulkitjain230405@gmail.com</div>
+                    <div class="contact-item-apple"><i class="fas fa-map-marker-alt"></i> Rajkot, Gujarat, India</div>
+                </div>
+                <div class="contact-icons-apple">
+                    <a href="https://www.instagram.com/pulkit_jain_023/?hl=en" target="_blank" class="contact-icon-apple"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/pulkit-jain-071996286/" target="_blank" class="contact-icon-apple"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:pulkitjain230405@gmail.com" class="contact-icon-apple"><i class="fas fa-envelope"></i></a>
+                    <a href="https://x.com/pulkit230405" target="_blank" class="contact-icon-apple"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/pulkit230405" target="_blank" class="contact-icon-apple"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-apple" data-animate="fade-up">
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group-apple">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group-apple">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group-apple">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group-apple">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn-apple">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>thanks for visiting!!</p>
+        <div class="footer-info">
+            <h3>Pulkit Jain</h3>
+            <p>AI & ML ENTHUSIAST</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
