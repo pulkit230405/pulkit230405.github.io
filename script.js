@@ -264,66 +264,47 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Skill Bars Animation
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.progress-line span');
-    skillBars.forEach(bar => {
-        const percent = bar.getAttribute('data-percent');
-        bar.style.width = percent + '%';
+// Hamburger menu logic
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeMobileMenu = document.querySelector('.close-mobile-menu');
+
+if (hamburger && mobileMenu && closeMobileMenu) {
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+    closeMobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    // Close menu on nav link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
 }
-
-// Initialize Soft Skills Chart
-function initSoftSkillsChart() {
-    const ctx = document.getElementById('softSkillsChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ['Communication', 'Leadership', 'Teamwork', 'Problem Solving', 'Project Management'],
-            datasets: [{
-                label: 'Soft Skills',
-                data: [90, 85, 95, 88, 82],
-                backgroundColor: 'rgba(74, 144, 226, 0.2)',
-                borderColor: 'rgba(74, 144, 226, 1)',
-                pointBackgroundColor: 'rgba(74, 144, 226, 1)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(74, 144, 226, 1)'
-            }]
-        },
-        options: {
-            scale: {
-                ticks: {
-                    beginAtZero: true,
-                    max: 100
-                }
-            },
-            responsive: true,
-            maintainAspectRatio: false
-        }
+// Sync theme toggle in mobile menu
+const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
+if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', () => {
+        themeToggle.click();
     });
 }
-
-// Intersection Observer for skill bars
-const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateSkillBars();
-            skillsObserver.unobserve(entry.target);
-        }
+// Sync language select in mobile menu
+const mobileLangSelect = document.querySelector('.mobile-language-select');
+if (mobileLangSelect) {
+    mobileLangSelect.addEventListener('change', (e) => {
+        languageSelect.value = e.target.value;
+        languageSelect.dispatchEvent(new Event('change'));
     });
-}, { threshold: 0.5 });
-
-// Observe skills section
-const skillsSection = document.querySelector('.skills-section');
-if (skillsSection) {
-    skillsObserver.observe(skillsSection);
+    // Keep mobile select in sync with main select
+    languageSelect.addEventListener('change', (e) => {
+        mobileLangSelect.value = e.target.value;
+    });
 }
-
-// Initialize chart when the page loads
-window.addEventListener('load', () => {
-    initSoftSkillsChart();
-});
 
 // Contact Form Handling
 function handleSubmit(event) {
@@ -373,19 +354,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeComponents() {
-    // Initialize skill bars
-    const skillsSection = document.querySelector('.skills-section');
-    if (skillsSection) {
-        skillsObserver.observe(skillsSection);
-    }
-
-    // Initialize soft skills chart
-    try {
-        initSoftSkillsChart();
-    } catch (error) {
-        console.log('Chart initialization deferred');
-    }
-
     // Initialize project cards
     initializeProjectCards();
 
@@ -452,4 +420,56 @@ function animateOnScroll() {
 
 // Call on DOMContentLoaded and on page load
 window.addEventListener('DOMContentLoaded', animateOnScroll);
-window.addEventListener('load', animateOnScroll); 
+window.addEventListener('load', animateOnScroll);
+
+// Fade-in animation for sections
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll('.section-content').forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+// Project Details Button Functionality
+// Add click handlers to new Details buttons
+const detailsButtons = document.querySelectorAll('.project-details-btn-apple');
+detailsButtons.forEach((btn, idx) => {
+    btn.addEventListener('click', (e) => {
+        // Find the closest project-apple div
+        const projectDiv = btn.closest('.project-apple');
+        if (!projectDiv) return;
+        // Use the order as the project index (or set a data-project attribute for more robustness)
+        const projectOrder = Array.from(document.querySelectorAll('.project-apple')).indexOf(projectDiv);
+        // Map order to project keys
+        const projectKeys = ['stock-market', 'chess-engine', 'live-sketch', 'sentiment', 'chrome-dino'];
+        openProjectModal(projectKeys[projectOrder]);
+    });
+});
+
+// Parallax effect for hero section
+const heroBg = document.querySelector('.hero-bg-parallax');
+if (heroBg) {
+    window.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        heroBg.style.backgroundPosition = `${60 + x * 10}% ${40 + y * 10}%`;
+    });
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        heroBg.style.backgroundPosition = `60% ${40 + scrollY * 0.03}%`;
+    });
+}
+
+// Animate testimonials on scroll (reuse animateOnScroll)
+// Already handled by [data-animate] observer 
